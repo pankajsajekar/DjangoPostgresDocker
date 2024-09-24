@@ -14,6 +14,6 @@ def SendEmail(request):
     otp = randint(1000, 9999)
     print(otp)
     email = 'pankaj@arcitech.ai'
-    send_email_otp(otp, email)
+    # send_email_otp.delay(otp, email)
     return HttpResponse("Send Email")
     # return render(request, 'base.html')

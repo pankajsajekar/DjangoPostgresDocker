@@ -148,3 +148,16 @@ EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
 EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, cast=bool)
+
+
+# Celery settings
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+
+# celery beat settings
+# CELERY_BEAT_SCHEDULE = {
+#     'every-30-seconds':{
+#         'task': 'testdocker.common.emails.send_email_otp.send_email_otp',
+#         'schedule' : 30,
+#         'args': ('123456', 'pankaj@arcitech.ai'),
+#     }
+# }
